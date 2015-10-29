@@ -2,6 +2,7 @@
   "hubot-pager-me",
   "hubot-diagnostics",
   "hubot-help",
+  "hubot-heroku-deploy-notifier",
   "hubot-heroku-keepalive",
   "hubot-redis-brain"
 ]
