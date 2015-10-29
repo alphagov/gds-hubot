@@ -1,4 +1,5 @@
 [
+  "hubot-pager-me",
   "hubot-diagnostics",
   "hubot-help",
   "hubot-heroku-keepalive",
