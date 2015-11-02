@@ -13,6 +13,10 @@ merging a pull request.
 As this app is hosted on a free dyno, it will sleep for six hours a day. We've
 configured a cron job to wake up Hubot at 6AM.
 
+## Documentation
+
+The original readme is found in [docs/HUBOT-README.md](docs/HUBOT-README.md).
+
 ## Licence
 
 [MIT License](LICENCE)
