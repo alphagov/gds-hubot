@@ -9,7 +9,7 @@ See the full list in [external-scripts.json](external-scripts.json).
 - **`hubot-pager-me`**. Connects to PagerDuty. Makes the bot tell `#2ndline` when
   there's an alert. Also adds commands to query who's on call.
 - **`hubot-heroku-keepalive`**. Prevents the bot from falling asleep.
-- **`hubot-standup-alarm`**. Configure a alarm for your standup every day.
+- **`hubot-standup-alarm`**. Configure an alarm for your standup every day.
 
 ## Deployment
 
