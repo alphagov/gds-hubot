@@ -5,6 +5,7 @@
   "author": "GOV.UK <govuk-dev@digital.cabinet-office.gov.uk>",
   "description": "Your friendly government robot.",
   "dependencies": {
+    "cron": "~1.0.4",
     "hubot": "^2.16.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-help": "^0.1.2",
