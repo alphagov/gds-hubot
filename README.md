@@ -17,7 +17,17 @@ gds-hubot is hosted on Heroku. [Auto-deploy](https://devcenter.heroku.com/articl
 has been set up, so the app is deployed immediately after pushing to master /
 merging a pull request.
 
-### Sleeping on Heroku
+## Adding pull request alerts for your project
+
+- Create a new webhook for your `myuser/myrepo` repository at:
+https://github.com/myuser/myrepo/settings/hooks/new
+
+- Add the url: http://gds-hubot.herokuapp.com/hubot/gh-repo-events?room=<room>
+(Don't forget to urlencode the room name, especially for IRC. Hint: # = %23)
+
+(taken from [here](https://github.com/hubot-scripts/hubot-github-repo-event-notifier/blob/master/src/github-repo-event-notifier.coffee#L8-L15))
+
+## Sleeping on Heroku
 
 As this app is hosted on a free dyno, it will sleep for six hours a day. We've
 configured a cron job to wake up Hubot at 6AM.

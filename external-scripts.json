@@ -4,5 +4,6 @@
   "hubot-heroku-keepalive",
   "hubot-pager-me",
   "hubot-redis-brain",
-  "hubot-standup-alarm"
+  "hubot-standup-alarm",
+  "hubot-github-repo-event-notifier"
 ]
