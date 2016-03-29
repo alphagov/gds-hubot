@@ -8,8 +8,6 @@ module.exports = (robot) ->
     exec command, (error, stdout, stderr) ->
       if error
         robot.messageRoom '#finding-things', "Hello! I have found a security vulnerability in one of the repos: ```#{stdout}```"
-      else
-        robot.messageRoom '#finding-things', "I've run a security audit, and there are no known vulnerabilities. :ok_hand:"
 
   robot.respond /audit/i, (res) ->
     res.send "Okay, running audit! This can take a while."
