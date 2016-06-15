@@ -1,4 +1,18 @@
-set -e
+((error_count=0))
+on_error() {
+  ((error_count++))
+}
+
+output=""
+check_repo() {
+  trap on_error ERR
+  repo_name=$1
+  shift
+  results=$(bundle exec govuk_security_audit github alphagov "${repo_name}" $@)
+  if [ $? -ne 0 ]; then
+    output=$(printf "%s\n%s\n%s" "${output}" "------ Auditing ${repo_name} -------" "${results}")
+  fi
+}
 
 repos=(
   business-support-finder
@@ -8,17 +22,19 @@ repos=(
   email-alert-api
   email-alert-service
   finder-frontend
+  panopticon
   policy-publisher
   rummager
   search-admin
 )
 
 for repo_name in "${repos[@]}"; do
-  echo "------ Auditing $repo_name -------"
-  bundle exec govuk_security_audit github alphagov $repo_name
+  check_repo "${repo_name}"
 done
 
-# Panopticon runs an old Rails version, which depends on a vulnerable version of
-# the `mail` gem. This is not an issue because we don't send email from Panopticon.
-echo "------ Auditing panopticon -------"
-bundle exec govuk_security_audit github alphagov panopticon --ignore OSVDB-131677
+if [ $error_count == 0 ]; then
+  output="No vulnerabilities found!"
+fi
+
+printf "Found %s repos with issues:\n%s\n" "${error_count}" "${output}"
+exit $error_count
