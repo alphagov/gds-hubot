@@ -22,7 +22,6 @@ repos=(
   email-alert-api
   email-alert-service
   finder-frontend
-  panopticon
   policy-publisher
   rummager
   search-admin
