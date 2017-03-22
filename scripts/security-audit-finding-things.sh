@@ -15,7 +15,6 @@ check_repo() {
 }
 
 repos=(
-  business-support-finder
   collections
   collections-publisher
   content-tagger
