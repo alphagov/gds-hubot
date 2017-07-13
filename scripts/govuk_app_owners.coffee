@@ -10,4 +10,4 @@ module.exports = (robot) ->
       .get() (err, response, body) ->
         if response.statusCode == 200
           data = JSON.parse(body)
-          res.reply "#{application} is owned by #{data.team}"
+          res.reply "<#{data.links.html_url>}|#{data.app_name}> is owned by <#{data.team}>"
