@@ -18,6 +18,6 @@
     "hubot-github-repo-event-notifier": ">= 0.0.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "4.8.4"
   }
 }
