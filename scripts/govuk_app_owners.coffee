@@ -3,7 +3,8 @@
 module.exports = (robot) ->
   robot.hear /who owns (.*)\?/i, (res) ->
     # Best guess of the intended application.
-    application = res.match[1].replace(' ', '-').toLowerCase()
+    application = res.match[1].replace(/ /g, '-').toLowerCase()
+    console.log("Fetching owner for #{application}")
 
     robot.http("https://docs.publishing.service.gov.uk/apps/#{application}.json")
       .get() (err, response, body) ->
