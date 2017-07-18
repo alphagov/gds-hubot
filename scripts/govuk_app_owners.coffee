@@ -11,3 +11,5 @@ module.exports = (robot) ->
         if response.statusCode == 200
           data = JSON.parse(body)
           res.reply "#{data.app_name} is owned by #{data.team}"
+        else
+          res.reply "I don't know who owns #{data.app_name}"
