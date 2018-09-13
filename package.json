@@ -17,6 +17,6 @@
     "hubot-standup-alarm": "^0.1.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "8.12.x"
   }
 }
