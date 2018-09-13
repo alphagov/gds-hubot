@@ -1,9 +1,9 @@
 [
   "hubot-diagnostics",
+  "hubot-github-repo-event-notifier",
   "hubot-help",
   "hubot-heroku-keepalive",
   "hubot-pager-me",
   "hubot-redis-brain",
-  "hubot-standup-alarm",
-  "hubot-github-repo-event-notifier"
+  "hubot-standup-alarm"
 ]
